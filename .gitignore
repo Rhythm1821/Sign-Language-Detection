@@ -6,6 +6,8 @@ __pycache__/
 # C extensions
 *.so
 
+signdetection/
+
 # Distribution / packaging
 .Python
 build/
