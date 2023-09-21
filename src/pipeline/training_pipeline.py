@@ -19,3 +19,6 @@ if __name__=="__main__":
     model_trainer = ModelTrainer()
     model=model_trainer.create_model()
     model_trainer.train_model(model,X_train,y_train)
+
+    # Save the model
+    model.save("./model/signdetection.h5")
