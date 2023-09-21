@@ -1,9 +1,6 @@
-import mediapipe as mp
 import cv2
-import matplotlib.pyplot as plt
 import numpy as np
 import sys,os
-from sklearn.model_selection import train_test_split
 
 
 sys.path.append(".")
@@ -90,19 +87,8 @@ class DataIngestion:
                     labels.append(label_map[action])
             return sequences, labels
         except Exception as e:
-            print("Failed storing the data:",e,exc_type, fname, exc_tb.tb_lineno)            
+            print("Failed storing the data:",e)            
     
-    def X_and_y_split(self,sequences,labels):
-            X = np.array(sequences)
-            num_classes = len(np.unique(labels))
-            y = np.eye(num_classes)[labels].astype(int)
-
-            return X,y
-    
-    def data_split(self,X,y):
-        X_train,X_test,y_train,y_test=train_test_split(X,y,test_size=0.05)
-
-        return X_train,X_test,y_train,y_test
     
 
 
