@@ -2,7 +2,6 @@ from flask import Flask,render_template,request
 import sys, subprocess
 sys.path.append(".")
 from src.pipeline.training_pipeline import train_model
-from src.pipeline.prediction_pipeline import webcamdetection
 
 app = Flask(__name__)
 
